@@ -1,5 +1,10 @@
+import  { useState } from "react";
+import { UserAuth } from "../context/AuthContext";
+
 export default function UserDashboard() {
+  const { user } = UserAuth();
+
   return (
-    <div>UserDashboard</div>
+    <div>Welcome {user?.firstName} </div>
   )
 }
